@@ -39,7 +39,7 @@ public class AddonTemplate extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "xin.bbtt.plus.addon";
     }
 
     @Override
