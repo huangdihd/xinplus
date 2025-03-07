@@ -1,4 +1,4 @@
-package com.example.addon.mixin;
+package xin.bbtt.plus.addon.mixin;
 
 import com.example.addon.AddonTemplate;
 import net.minecraft.client.MinecraftClient;

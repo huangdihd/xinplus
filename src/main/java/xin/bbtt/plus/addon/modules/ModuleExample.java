@@ -1,4 +1,4 @@
-package com.example.addon.modules;
+package xin.bbtt.plus.addon.modules;
 
 import com.example.addon.AddonTemplate;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;

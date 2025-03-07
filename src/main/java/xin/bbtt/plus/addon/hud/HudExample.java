@@ -1,4 +1,4 @@
-package com.example.addon.hud;
+package xin.bbtt.plus.addon.hud;
 
 import com.example.addon.AddonTemplate;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
