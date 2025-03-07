@@ -1,6 +1,6 @@
 package xin.bbtt.plus.addon.modules;
 
-import com.example.addon.AddonTemplate;
+import xin.bbtt.plus.addon.AddonTemplate;
 import meteordevelopment.meteorclient.events.render.Render3DEvent;
 import meteordevelopment.meteorclient.renderer.ShapeMode;
 import meteordevelopment.meteorclient.settings.ColorSetting;

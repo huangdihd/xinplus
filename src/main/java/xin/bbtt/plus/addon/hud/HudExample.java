@@ -1,6 +1,6 @@
 package xin.bbtt.plus.addon.hud;
 
-import com.example.addon.AddonTemplate;
+import xin.bbtt.plus.addon.AddonTemplate;
 import meteordevelopment.meteorclient.systems.hud.HudElement;
 import meteordevelopment.meteorclient.systems.hud.HudElementInfo;
 import meteordevelopment.meteorclient.systems.hud.HudRenderer;

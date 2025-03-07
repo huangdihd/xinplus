@@ -1,6 +1,6 @@
 package xin.bbtt.plus.addon.mixin;
 
-import com.example.addon.AddonTemplate;
+import xin.bbtt.plus.addon.AddonTemplate;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.RunArgs;
 import org.spongepowered.asm.mixin.Mixin;
