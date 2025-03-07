@@ -1,8 +1,8 @@
 package xin.bbtt.plus.addon;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import xin.bbtt.plus.addon.commands.CommandExample;
+import xin.bbtt.plus.addon.hud.HudExample;
+import xin.bbtt.plus.addon.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
