@@ -11,6 +11,6 @@ An addon for MeteorClient.
 Thanks to all the amazing people who have contributed to this project:
 
 <a href="https://github.com/huangdihd/xinplus/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=huangdihd/xinbot" />
+  <img src="https://contrib.rocks/image?repo=huangdihd/xinbot"  alt="Contributors"/>
 </a>
 
