@@ -1,25 +1,23 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "xinplus",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for Meteor Client addons.",
+  "name": "XinPlus",
+  "description": "An addon for Meteor Client.",
   "authors": [
-    "seasnail"
+    "huangdihd"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/huangdihd/xinplus"
   },
   "icon": "assets/template/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.AddonTemplate"
+      "xin.bbtt.plus.addon.XinPlus"
     ]
   },
-  "mixins": [
-    "addon-template.mixins.json"
-  ],
+  "mixins": [],
   "custom": {
     "meteor-client:color": "225,25,25"
   },
