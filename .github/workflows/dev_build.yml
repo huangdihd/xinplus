@@ -9,7 +9,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-            persist-credentials: false
+            persist-credentials: true
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
