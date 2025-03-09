@@ -1,6 +1,7 @@
 package xin.bbtt.plus.addon.modules;
 
 import com.mojang.authlib.GameProfile;
+import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.systems.modules.Categories;
 import meteordevelopment.meteorclient.systems.modules.Module;
@@ -40,5 +41,9 @@ public class PlayerNotifier extends Module {
             if (profile == null) return;
             info(Text.of("§8[§c-§8]§7" + profile.getName()));
         }
+    }
+    @EventHandler
+    private void onGameJoin(GameJoinedEvent event) {
+        players.clear();
     }
 }
