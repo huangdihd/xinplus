@@ -1,6 +1,7 @@
 package xin.bbtt.plus.addon.modules;
 
 import com.mojang.authlib.GameProfile;
+import meteordevelopment.meteorclient.MeteorClient;
 import meteordevelopment.meteorclient.events.game.GameJoinedEvent;
 import meteordevelopment.meteorclient.events.packets.PacketEvent;
 import meteordevelopment.meteorclient.systems.modules.Categories;
@@ -28,6 +29,8 @@ public class PlayerNotifier extends Module {
             if (packet.getEntries().size() != 1) return;
             PlayerListS2CPacket.Entry entry = packet.getEntries().getFirst();
             if (packet.getActions().contains(PlayerListS2CPacket.Action.ADD_PLAYER)) {
+                if (MeteorClient.mc.player != null && entry.profile().getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
+                    return;
                 info(Text.of("§8[§2+§8]§7" + entry.profile().getName()));
             }
         }
@@ -39,6 +42,8 @@ public class PlayerNotifier extends Module {
             if (profileIds.size() != 1) return;
             GameProfile profile = players.get(profileIds.getFirst());
             if (profile == null) return;
+            if (MeteorClient.mc.player != null && profile.getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
+                return;
             info(Text.of("§8[§c-§8]§7" + profile.getName()));
         }
     }
