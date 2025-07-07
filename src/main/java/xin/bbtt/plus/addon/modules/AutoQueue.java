@@ -26,9 +26,12 @@ public class AutoQueue extends Module {
 
     @EventHandler
     private void onReceiveMessage(ReceiveMessageEvent event) {
+        if (MeteorClient.mc.getNetworkHandler() == null) return;
+
         String message = event.getMessage().getString();
-        if (!message.contains("|")) return;
-        String[] parts = message.split("\\|");
+        if (!message.contains("丨")) return;
+
+        String[] parts = message.split("丨");
         if (parts.length != 2) return;
 
         String question = parts[0].trim();
@@ -42,6 +45,6 @@ public class AutoQueue extends Module {
         if (!matcher.find()) return;
 
         String answer = matcher.group(1);
-        Objects.requireNonNull(MeteorClient.mc.getNetworkHandler()).sendChatMessage(answer);
+        MeteorClient.mc.getNetworkHandler().sendChatMessage(answer);
     }
 }
