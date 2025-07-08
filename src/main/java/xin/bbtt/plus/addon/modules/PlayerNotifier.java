@@ -25,24 +25,26 @@ public class PlayerNotifier extends Module {
     @EventHandler
     private void onAddPlayer(PacketEvent.Receive event) {
         if (event.packet instanceof PlayerListS2CPacket packet) {
+            if (MeteorClient.mc.player == null) return;
             packet.getEntries().forEach(entry -> players.put(entry.profileId(), entry.profile()));
             if (packet.getEntries().size() != 1) return;
             PlayerListS2CPacket.Entry entry = packet.getEntries().getFirst();
-            if (packet.getActions().contains(PlayerListS2CPacket.Action.ADD_PLAYER)) {
-                if (MeteorClient.mc.player != null && entry.profile().getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
-                    return;
-                info(Text.of("§8[§2+§8]§7" + entry.profile().getName()));
-            }
+            if (!packet.getActions().contains(PlayerListS2CPacket.Action.ADD_PLAYER))
+                return;
+            if (entry.profile().getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
+                return;
+            info(Text.of("§8[§2+§8]§7" + entry.profile().getName()));
         }
     }
     @EventHandler
     private void onRemovePlayer(PacketEvent.Receive event) {
         if (event.packet instanceof PlayerRemoveS2CPacket(java.util.List<UUID> profileIds)) {
+            if (MeteorClient.mc.player == null) return;
             profileIds.forEach(players::remove);
             if (profileIds.size() != 1) return;
             GameProfile profile = players.get(profileIds.getFirst());
             if (profile == null) return;
-            if (MeteorClient.mc.player != null && profile.getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
+            if (profile.getId().equals(MeteorClient.mc.player.getGameProfile().getId()))
                 return;
             info(Text.of("§8[§c-§8]§7" + profile.getName()));
         }
