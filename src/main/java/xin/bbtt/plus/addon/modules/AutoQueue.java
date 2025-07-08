@@ -34,11 +34,10 @@ public class AutoQueue extends Module {
         String[] parts = message.split("丨");
         if (parts.length != 2) return;
 
-        String question = parts[0].trim();
+        String question = parts[0].replaceAll("<[^>]*>", "").trim();
         String options = parts[1].trim();
 
         if (!questions.has(question)) return;
-
         Pattern pattern = Pattern.compile(questions.get(question).getAsString());
         Matcher matcher = pattern.matcher(options);
 
