@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class PlayerNotifier extends Module {
-    Map<UUID, GameProfile> players = new HashMap<>();
+    final Map<UUID, GameProfile> players = new HashMap<>();
 
     public PlayerNotifier() {
         super(Categories.Misc, "player-notifier", "Notifies you of player events.");
