@@ -26,7 +26,9 @@ dependencies {
     modImplementation("net.fabricmc:fabric-loader:${properties["loader_version"] as String}")
 
     // Meteor
-    modImplementation("meteordevelopment:meteor-client:${properties["meteor_version"] as String}-SNAPSHOT")
+    modImplementation("meteordevelopment:meteor-client:${properties["meteor_version"] as String}-SNAPSHOT") {
+        exclude(group = "com.github.LlamaLad7.MixinExtras", module = "mixinextras-fabric")
+    }
 
     // Fabric API
     modImplementation("net.fabricmc.fabric-api:fabric-api:${properties["fabric_api_version"] as String}")
