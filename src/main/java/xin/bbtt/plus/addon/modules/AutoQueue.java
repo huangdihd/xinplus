@@ -44,6 +44,6 @@ public class AutoQueue extends Module {
         if (!matcher.find()) return;
 
         String answer = matcher.group(1);
-        MeteorClient.mc.getNetworkHandler().sendChatMessage(answer);
+        MeteorClient.mc.getNetworkHandler().sendChatMessage(".say " + answer);
     }
 }
